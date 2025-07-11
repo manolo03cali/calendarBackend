@@ -12,7 +12,7 @@ const {
   revalidarToken,
 } = require("../controllers/auth");
 const { validateFields } = require("../middlewares/field-validators");
-const { validarJWT } = require("../middlewares/validar-jwt");
+const { validateJWT } = require("../middlewares/validar-jwt");
 router.post(
   "/new",
   [
@@ -23,7 +23,6 @@ router.post(
       min: 6,
     }),
     validateFields,
-    // validarJWT,
     // validarCampos
   ],
   createUser
@@ -40,5 +39,5 @@ router.post(
   ],
   loginUser
 );
-router.get("/renew", validarJWT, revalidarToken);
+router.get("/renew", validateJWT, revalidarToken);
 module.exports = router;
