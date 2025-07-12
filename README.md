@@ -19,26 +19,12 @@ Este es el backend para una aplicación de calendario con gestión de usuarios, 
 
 🚀 Instalación paso a paso
 
-1. Clono el repositorio
-
-git clone <url-del-repo>
-cd 10-calendar-backend
-
-2. Instalo las dependencias
-
-npm install
-
-3. Creo el archivo .env con mis variables de entorno
-
-PORT=4000
-DB_CNN=mongodb+srv://<usuario>:<password>@cluster.mongodb.net/calendar
-SECRET_JWT_SEED=miSuperSecretoJWT
-
-🧪 Scripts disponibles
-
-    Modo desarrollo (con recarga automática):
-
-npm run dev
+1. Instalar dependencias
+   `npm install`
+2. Clonar el archivo
+   `.env.template` y renombrar a `.env`
+3. Cambiar variables de entorno de acuerdo a su configuración.
+4. Correr el servidor `npm start`
 
 Modo producción:
 
@@ -127,7 +113,6 @@ Agregué los siguientes scripts al package.json:
 🌍 MongoDB Atlas
 
 Requiere crear una cuenta en MongoDB Atlas, configurar una base de datos y conectar con la cadena correspondiente en el archivo .env.
-👨‍💻 Autor
 
 Desarrollado por Jose Manuel Quintero Ferreira
 Este proyecto fue creado como una guía práctica para construir un backend completo con autenticación y manejo de datos usando las herramientas más comunes de Node.js.
