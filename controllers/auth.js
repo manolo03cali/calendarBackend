@@ -131,6 +131,8 @@ const revalidarToken = async (req, res = response) => {
   // Devuelvo el nuevo token en la respuesta
   res.json({
     ok: true,
+    uid,
+    name,
     token: newToken,
     msg: "Token revalidated successfully",
   });
