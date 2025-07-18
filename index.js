@@ -1,3 +1,6 @@
+// Importo path, que me permite trabajar con rutas de archivos
+const path = require("path");
+
 // Importo Express, que es el framework que utilizo para levantar mi servidor web
 const express = require("express");
 
@@ -42,6 +45,14 @@ app.use("/api/auth", require("./routes/auth"));
 // Todas las rutas que comienzan con /api/events serán manejadas por './routes/events.js'
 // Aquí gestiono el CRUD de eventos del calendario
 app.use("/api/events", require("./routes/events"));
+//ahora en express 5.0.0 ya no es valido colocar en app.use('*')
+// ya que, lanzara error, en su lugar lo que a mi me funciono fue
+// colocar en lugar del asterisco lo siguiente:
+//cualquier ruta que no sean estas la lleva a servir el contenido que esta en la carpeta public
+//
+app.use("/{*splat}", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
 
 // -------------------
 // Inicio del servidor
