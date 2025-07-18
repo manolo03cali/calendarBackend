@@ -1,5 +1,9 @@
 📅 Calendar Backend
 
+# Prueba la aplicación
+
+Visita este [enlace](https://calendar-backend25.up.railway.app/ "Calendario")
+
 Este es el backend para una aplicación de calendario con gestión de usuarios, eventos y autenticación. Lo desarrollé usando Node.js, Express, MongoDB, JWT y otras herramientas modernas. Toda la lógica está organizada en controladores, middlewares, rutas y modelos de datos.
 ✨ Características principales
 
